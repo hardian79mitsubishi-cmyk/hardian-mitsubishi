@@ -9,52 +9,43 @@
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:#fff;
-scroll-behavior:smooth;
+background:linear-gradient(135deg,#f5f7fa,#e4e9f0);
+color:#222;
+text-align:center;
 }
 
 header{
 padding:60px 20px;
-text-align:center;
-background:rgba(0,0,0,0.4);
+background:linear-gradient(135deg,#b30000,#ff1a1a);
+color:white;
 }
 
-header h1{
-font-size:42px;
-margin-bottom:10px;
-}
+h1{margin:0;font-size:40px;}
 
-section{
-padding:60px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.section{
+padding:50px 20px;
 }
 
 .card{
-background:#ffffff10;
-backdrop-filter:blur(10px);
-padding:20px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+background:white;
+margin:30px auto;
+padding:25px;
+border-radius:15px;
+max-width:800px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 transition:0.3s;
-cursor:pointer;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
-.card img{
+img{
 width:100%;
-border-radius:15px;
-margin-bottom:15px;
+max-width:600px;
+border-radius:12px;
+margin-top:15px;
 }
 
 .btn{
@@ -63,8 +54,8 @@ margin-top:15px;
 padding:12px 25px;
 background:#25D366;
 color:white;
-border-radius:10px;
 text-decoration:none;
+border-radius:8px;
 font-weight:bold;
 }
 
@@ -73,58 +64,19 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
+color:white;
 padding:15px 18px;
 border-radius:50px;
-color:white;
-font-weight:bold;
 text-decoration:none;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
-}
-
-form{
-background:#ffffff10;
-padding:25px;
-border-radius:20px;
-}
-
-input{
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:8px;
-border:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 footer{
-text-align:center;
 padding:20px;
-background:#00000080;
-}
-
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-justify-content:center;
-align-items:center;
-}
-
-.modal-content{
 background:#111;
-padding:30px;
-border-radius:15px;
-max-width:500px;
-}
-
-.close{
-float:right;
-cursor:pointer;
-color:red;
-font-size:20px;
+color:white;
+margin-top:40px;
 }
 </style>
 </head>
@@ -133,84 +85,50 @@ font-size:20px;
 
 <header>
 <h1>Hardian Sales Mitsubishi</h1>
-<p>Solusi pembelian mobil Mitsubishi terpercaya • Proses cepat • DP ringan</p>
-<a class="btn" href="https://wa.me/6282130474938">Chat WhatsApp</a>
+<p>Solusi pembelian mobil Mitsubishi terpercaya</p>
 </header>
 
-<section>
-<h2 style="text-align:center;">Pilihan Mobil</h2>
+<div class="section">
 
-<div class="grid">
-
-<div class="card" onclick="openModal('Destinator','SUV keluarga modern 7 penumpang. Mesin 1.5L efisien & fitur lengkap.')">
-<img src="Mitsubishi_Destinator__page-0001.jpg">
-<h3>Destinator (Terbaru)</h3>
+<div class="card">
+<h2>1. Mitsubishi Destinator (Terbaru)</h2>
+<img src="destinator.jpg" alt="Destinator">
+<p>SUV 7 penumpang modern, desain gagah, fitur lengkap.</p>
 </div>
 
-<div class="card" onclick="openModal('Xforce','Compact SUV futuristik dengan fitur kekinian & desain sporty.')">
-<img src="Mitsubishi-Xforce-Ultimate-DS-300x247.jpg">
-<h3>Xforce</h3>
+<div class="card">
+<h2>2. Mitsubishi Xforce</h2>
+<img src="xforce.jpg" alt="Xforce">
+<p>Compact SUV futuristik dengan teknologi terbaru.</p>
 </div>
 
-<div class="card" onclick="openModal('Xpander','MPV favorit keluarga. Kabin luas & irit bahan bakar.')">
-<img src="mitsubishi-xpander-17705.jpg">
-<h3>Xpander</h3>
+<div class="card">
+<h2>3. Mitsubishi Xpander</h2>
+<img src="xpander.jpg" alt="Xpander">
+<p>MPV keluarga irit, kabin luas & nyaman.</p>
 </div>
 
-<div class="card" onclick="openModal('Pajero Sport','SUV premium tangguh, mesin bertenaga & interior mewah.')">
-<img src="tumblr_a87a3e12e3f28204ab8667d048ba31f6_512c9d33_1280.jpg">
-<h3>Pajero Sport</h3>
+<div class="card">
+<h2>4. Mitsubishi Pajero Sport</h2>
+<img src="pajero.jpg" alt="Pajero Sport">
+<p>SUV premium tangguh dan berkelas.</p>
 </div>
 
-<div class="card" onclick="openModal('Fuso Canter','Truk niaga tangguh & hemat operasional untuk bisnis.')">
-<img src="xq3k6dsvecrg5vtwgg6g0fo1acz4cz1uqgfjezur-optimized.webp">
-<h3>Fuso Canter</h3>
+<div class="card">
+<h2>5. Mitsubishi Fuso Canter</h2>
+<img src="fuso.jpg" alt="Fuso Canter">
+<p>Truk niaga kuat & hemat untuk bisnis.</p>
 </div>
 
 </div>
-</section>
 
-<section>
-<h2>Simulasi Kredit</h2>
-<form onsubmit="sendWA(); return false;">
-<input type="text" id="nama" placeholder="Nama Anda" required>
-<input type="tel" id="hp" placeholder="Nomor WhatsApp" required>
-<input type="text" id="mobil" placeholder="Mobil yang diminati" required>
-<button class="btn" type="submit">Kirim ke WhatsApp</button>
-</form>
-</section>
+<a class="floating-wa" href="https://wa.me/6282130474938">
+Chat WA
+</a>
 
 <footer>
 © 2026 Hardian Sales Mitsubishi
 </footer>
-
-<a class="floating-wa" href="https://wa.me/6282130474938">💬 WA</a>
-
-<div class="modal" id="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal()">✖</span>
-<h3 id="modalTitle"></h3>
-<p id="modalText"></p>
-</div>
-</div>
-
-<script>
-function openModal(title,text){
-document.getElementById('modalTitle').innerText=title;
-document.getElementById('modalText').innerText=text;
-document.getElementById('modal').style.display='flex';
-}
-function closeModal(){
-document.getElementById('modal').style.display='none';
-}
-function sendWA(){
-let nama=document.getElementById('nama').value;
-let hp=document.getElementById('hp').value;
-let mobil=document.getElementById('mobil').value;
-let pesan=`Halo, saya ${nama}. No: ${hp}. Tertarik mobil ${mobil}.`;
-window.open(`https://wa.me/6282130474938?text=${encodeURIComponent(pesan)}`);
-}
-</script>
 
 </body>
 </html>
