@@ -10,38 +10,41 @@ body{
 margin:0;
 font-family:Arial, sans-serif;
 background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;
+color:#fff;
+scroll-behavior:smooth;
+}
+
+header{
+padding:60px 20px;
 text-align:center;
+background:rgba(0,0,0,0.4);
 }
 
-.hero{
-padding:70px 20px;
-}
-
-h1{
-font-size:40px;
+header h1{
+font-size:42px;
 margin-bottom:10px;
 }
 
-p{
-color:#e0e0e0;
-max-width:700px;
-margin:10px auto;
-line-height:1.6;
+section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
 }
 
-.section{
-padding:40px 20px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
-margin:25px auto;
-padding:25px;
+background:#ffffff10;
+backdrop-filter:blur(10px);
+padding:20px;
 border-radius:20px;
-max-width:800px;
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
 transition:0.3s;
+cursor:pointer;
 }
 
 .card:hover{
@@ -50,83 +53,164 @@ transform:translateY(-8px);
 
 .card img{
 width:100%;
-max-height:400px;
-object-fit:cover;
 border-radius:15px;
 margin-bottom:15px;
 }
 
 .btn{
 display:inline-block;
-margin-top:20px;
-padding:14px 28px;
+margin-top:15px;
+padding:12px 25px;
 background:#25D366;
 color:white;
+border-radius:10px;
 text-decoration:none;
-border-radius:30px;
 font-weight:bold;
-font-size:17px;
-transition:0.3s;
 }
 
-.btn:hover{
-background:#1ebe5d;
+.floating-wa{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 18px;
+border-radius:50px;
+color:white;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+form{
+background:#ffffff10;
+padding:25px;
+border-radius:20px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:none;
 }
 
 footer{
-margin-top:40px;
+text-align:center;
 padding:20px;
-background:#000;
-color:#aaa;
+background:#00000080;
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:#111;
+padding:30px;
+border-radius:15px;
+max-width:500px;
+}
+
+.close{
+float:right;
+cursor:pointer;
+color:red;
+font-size:20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
+<header>
 <h1>Hardian Sales Mitsubishi</h1>
-<p>Solusi pembelian mobil Mitsubishi terpercaya. Proses cepat, DP ringan & pelayanan profesional sampai unit terparkir di rumah Anda.</p>
-<a class="btn" href="https://wa.me/6282130474938">Chat WhatsApp Sekarang</a>
+<p>Solusi pembelian mobil Mitsubishi terpercaya • Proses cepat • DP ringan</p>
+<a class="btn" href="https://wa.me/6282130474938">Chat WhatsApp</a>
+</header>
+
+<section>
+<h2 style="text-align:center;">Pilihan Mobil</h2>
+
+<div class="grid">
+
+<div class="card" onclick="openModal('Destinator','SUV keluarga modern 7 penumpang. Mesin 1.5L efisien & fitur lengkap.')">
+<img src="Mitsubishi_Destinator__page-0001.jpg">
+<h3>Destinator (Terbaru)</h3>
 </div>
 
-<div class="section">
-
-<div class="card">
-<img src="Mitsubishi_Destinator__page-0001.jpg" alt="Mitsubishi Destinator">
-<h2>Mitsubishi Destinator (Terbaru)</h2>
-<p>SUV 7 penumpang modern dengan desain gagah & fitur terbaru.</p>
+<div class="card" onclick="openModal('Xforce','Compact SUV futuristik dengan fitur kekinian & desain sporty.')">
+<img src="Mitsubishi-Xforce-Ultimate-DS-300x247.jpg">
+<h3>Xforce</h3>
 </div>
 
-<div class="card">
-<img src="xq3k6dsvecrg5vtwgg6g0fo1acz4cz1uqgfjezur-optimized.webp" alt="Mitsubishi Pajero Sport">
-<h2>Mitsubishi Pajero Sport</h2>
-<p>SUV tangguh, bertenaga, dan premium untuk perjalanan jauh.</p>
+<div class="card" onclick="openModal('Xpander','MPV favorit keluarga. Kabin luas & irit bahan bakar.')">
+<img src="mitsubishi-xpander-17705.jpg">
+<h3>Xpander</h3>
 </div>
 
-<div class="card">
-<img src="mitsubishi-xpander-17705.jpg" alt="Mitsubishi Xpander">
-<h2>Mitsubishi Xpander</h2>
-<p>MPV keluarga paling favorit, kabin luas & irit bahan bakar.</p>
+<div class="card" onclick="openModal('Pajero Sport','SUV premium tangguh, mesin bertenaga & interior mewah.')">
+<img src="tumblr_a87a3e12e3f28204ab8667d048ba31f6_512c9d33_1280.jpg">
+<h3>Pajero Sport</h3>
 </div>
 
-<div class="card">
-<img src="Mitsubishi-Xforce-Ultimate-DS-300x247.jpg" alt="Mitsubishi Xforce">
-<h2>Mitsubishi Xforce</h2>
-<p>Compact SUV futuristik dengan fitur modern.</p>
-</div>
-
-<div class="card">
-<img src="tumblr_a87a3e12e3f28204ab8667d048ba31f6_512c9d33_1280.jpg" alt="Mitsubishi Fuso Canter">
-<h2>Mitsubishi Fuso Canter</h2>
-<p>Truk niaga tangguh untuk kebutuhan bisnis.</p>
+<div class="card" onclick="openModal('Fuso Canter','Truk niaga tangguh & hemat operasional untuk bisnis.')">
+<img src="xq3k6dsvecrg5vtwgg6g0fo1acz4cz1uqgfjezur-optimized.webp">
+<h3>Fuso Canter</h3>
 </div>
 
 </div>
+</section>
+
+<section>
+<h2>Simulasi Kredit</h2>
+<form onsubmit="sendWA(); return false;">
+<input type="text" id="nama" placeholder="Nama Anda" required>
+<input type="tel" id="hp" placeholder="Nomor WhatsApp" required>
+<input type="text" id="mobil" placeholder="Mobil yang diminati" required>
+<button class="btn" type="submit">Kirim ke WhatsApp</button>
+</form>
+</section>
 
 <footer>
 © 2026 Hardian Sales Mitsubishi
 </footer>
+
+<a class="floating-wa" href="https://wa.me/6282130474938">💬 WA</a>
+
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">✖</span>
+<h3 id="modalTitle"></h3>
+<p id="modalText"></p>
+</div>
+</div>
+
+<script>
+function openModal(title,text){
+document.getElementById('modalTitle').innerText=title;
+document.getElementById('modalText').innerText=text;
+document.getElementById('modal').style.display='flex';
+}
+function closeModal(){
+document.getElementById('modal').style.display='none';
+}
+function sendWA(){
+let nama=document.getElementById('nama').value;
+let hp=document.getElementById('hp').value;
+let mobil=document.getElementById('mobil').value;
+let pesan=`Halo, saya ${nama}. No: ${hp}. Tertarik mobil ${mobil}.`;
+window.open(`https://wa.me/6282130474938?text=${encodeURIComponent(pesan)}`);
+}
+</script>
 
 </body>
 </html>
