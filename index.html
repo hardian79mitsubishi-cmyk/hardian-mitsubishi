@@ -6,36 +6,23 @@
 <title>Hardian Sales Mitsubishi</title>
 
 <style>
-
-/* ===== GLOBAL ===== */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-font-family: 'Segoe UI', sans-serif;
-}
-
 body{
+margin:0;
+font-family:Arial, sans-serif;
 background:#f4f6f9;
 color:#222;
+scroll-behavior:smooth;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("Mitsubishi_Destinator__page-0001.jpg");
 background-size:cover;
 background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
 color:white;
-padding:20px;
+padding:120px 20px;
+text-align:center;
 }
 
 .hero h1{
@@ -45,10 +32,13 @@ margin-bottom:15px;
 
 .hero p{
 max-width:700px;
-line-height:1.6;
+margin:auto;
+font-size:18px;
 }
 
+/* BUTTON */
 .btn{
+display:inline-block;
 margin-top:20px;
 padding:14px 28px;
 background:#d60000;
@@ -64,186 +54,107 @@ background:#a80000;
 transform:scale(1.05);
 }
 
-/* ===== SECTION ===== */
+/* SECTION */
 .section{
-padding:70px 20px;
+padding:60px 20px;
 text-align:center;
 }
 
-.section h2{
-margin-bottom:40px;
-font-size:32px;
-}
-
-/* ===== CARDS ===== */
 .card{
 background:white;
-max-width:900px;
-margin:30px auto;
+margin:25px auto;
 padding:25px;
-border-radius:18px;
+border-radius:15px;
+max-width:900px;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-5px);
 }
 
 .card img{
 width:100%;
-border-radius:14px;
+max-height:400px;
+object-fit:cover;
+border-radius:12px;
 margin-bottom:15px;
 }
 
-/* ===== TESTIMONI ===== */
-.testimoni{
-background:#ffffff;
-padding:50px 20px;
-}
-
-.review{
-max-width:700px;
-margin:20px auto;
-font-style:italic;
-color:#444;
-}
-
-/* ===== FORM ===== */
-.form-box{
-background:#fff;
-padding:30px;
-max-width:600px;
-margin:30px auto;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
-
-input, select{
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:8px;
-border:1px solid #ccc;
-}
-
-button{
-width:100%;
-padding:14px;
-background:#111;
-color:white;
-border:none;
-border-radius:8px;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-background:#d60000;
-}
-
-/* ===== FLOATING WA ===== */
-.float-wa{
+/* FLOAT WA */
+.wa-float{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 18px;
+padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* ===== FOOTER ===== */
 footer{
+background:#111;
+color:white;
 text-align:center;
 padding:20px;
-background:#111;
-color:#aaa;
 margin-top:40px;
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
 <h1>Hardian Sales Mitsubishi</h1>
-<p>Solusi pembelian mobil Mitsubishi terpercaya. Proses cepat, DP ringan & pelayanan profesional sampai unit terparkir di rumah Anda.</p>
-<a class="btn" href="https://wa.me/6282130474938">Chat WhatsApp Sekarang</a>
+<p>Solusi pembelian mobil Mitsubishi terpercaya. Proses cepat, DP ringan & pelayanan profesional sampai unit sampai ke rumah Anda.</p>
+<a href="https://wa.me/6282130474938" class="btn">Chat WhatsApp</a>
 </div>
 
-<!-- PRODUK -->
 <div class="section">
-<h2>Produk Unggulan</h2>
 
 <div class="card">
-<h3>Destinator (Terbaru)</h3>
+<h2>Destinator (Terbaru)</h2>
 <img src="Mitsubishi_Destinator__page-0001.jpg">
-<p>SUV 7-seater modern, desain gagah, fitur lengkap, nyaman untuk keluarga.</p>
+<p>SUV 7 penumpang modern dengan desain gagah dan fitur lengkap.</p>
 </div>
 
 <div class="card">
-<h3>Xforce</h3>
+<h2>Xforce</h2>
 <img src="Mitsubishi-Xforce-Ultimate-DS-300x247.jpg">
-<p>Compact SUV futuristik dengan teknologi kekinian dan handling stabil.</p>
+<p>Compact SUV futuristik dengan teknologi kekinian.</p>
 </div>
 
 <div class="card">
-<h3>Xpander</h3>
+<h2>Xpander</h2>
 <img src="mitsubishi-xpander-17705.jpg">
-<p>MPV favorit keluarga Indonesia, kabin luas dan irit bahan bakar.</p>
+<p>MPV favorit keluarga, kabin luas dan irit bahan bakar.</p>
 </div>
 
 <div class="card">
-<h3>Pajero Sport</h3>
+<h2>Pajero Sport</h2>
 <img src="tumblr_a87a3e12e3f28204ab8667d048ba31f6_512c9d33_1280.jpg">
-<p>SUV premium tangguh, mesin bertenaga dan tampilan berkelas.</p>
+<p>SUV premium tangguh dan berkelas.</p>
 </div>
 
 <div class="card">
-<h3>Fuso Canter</h3>
+<h2>Fuso Canter</h2>
 <img src="xq3k6dsvecrg5vtwgg6g0fo1acz4cz1uqgfjezur-optimized.webp">
-<p>Truk niaga handal untuk kebutuhan bisnis dan operasional.</p>
+<p>Truk niaga handal untuk kebutuhan bisnis.</p>
 </div>
 
 </div>
 
-<!-- FORM KREDIT -->
-<div class="section">
-<h2>Simulasi Kredit</h2>
-<div class="form-box">
-<input type="text" placeholder="Nama Lengkap">
-<input type="number" placeholder="DP yang diinginkan">
-<select>
-<option>Pilih Unit</option>
-<option>Destinator</option>
-<option>Xforce</option>
-<option>Xpander</option>
-<option>Pajero Sport</option>
-<option>Fuso</option>
-</select>
-<button>Kirim ke WhatsApp</button>
-</div>
-</div>
-
-<!-- TESTIMONI -->
-<div class="testimoni">
-<h2>Apa Kata Customer</h2>
-<div class="review">“Pelayanan cepat dan proses mudah. Recommended banget!”</div>
-<div class="review">“DP ringan, unit sampai rumah dengan aman.”</div>
-</div>
+<a href="https://wa.me/6282130474938" class="wa-float">
+💬 WhatsApp
+</a>
 
 <footer>
 © 2026 Hardian Sales Mitsubishi
 </footer>
-
-<!-- FLOAT WA -->
-<a class="float-wa" href="https://wa.me/6282130474938">💬 WA</a>
 
 </body>
 </html>
